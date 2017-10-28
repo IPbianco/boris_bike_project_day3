@@ -98,5 +98,6 @@ describe DockingStation do
     subject.dock(broken_bike)
     expect(subject.load_bikes(van)).to eq([broken_bike])
   end
+  
 
 end

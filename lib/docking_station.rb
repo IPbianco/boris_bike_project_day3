@@ -31,11 +31,10 @@ class DockingStation
 
   def load_bikes(van)
     @bikes.each do |bike|
-      van.bikes_in_van << bike unless bike.functional
+      van.bikes_in_van << @bikes.delete(bike) unless bike.functional
     end
     return van.bikes_in_van
   end
-
 
   private
 
